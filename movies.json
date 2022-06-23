@@ -1,0 +1,19 @@
+{
+  "movies": [
+    {
+      "title": "King Kong 2",
+      "lengthInMinutes": "7",
+      "cinemaNr": "5",
+      "playTime": "5",
+      "freeSeats": "50"
+    },
+
+    {
+      "title": "Godzilla",
+      "lengthInMinutes": "7",
+      "cinemaNr": "5",
+      "playTime": "5",
+      "freeSeats": "2"
+    }
+  ]
+}
