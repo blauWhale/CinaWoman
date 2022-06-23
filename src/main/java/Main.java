@@ -11,16 +11,21 @@ public class Main {
     }
 
     private static void menuPrinter(Scanner scanner, TimeTable timeTable) throws MenuException {
-        ArrayList<Movie> movieList = timeTable.createTimeTable();
         System.out.println("Welcome to CinaWoman" );
+        System.out.println("Please enter your name: " );
+        String input = scanner.nextLine();
+        Client client = new Client(input);
+        System.out.println("Welcome to CinaWoman " + client.getName());
+
+        ArrayList<Movie> movieList = timeTable.createTimeTable();
         System.out.println("Choose one of the movies listed: " );
         for (int movieNumber = 0; movieNumber < movieList.size(); movieNumber++) {
             System.out.println("[" + (movieNumber) + "] " + movieList.get(movieNumber).getMovieTitle());
         }
         Movie chosenMovie;
         try {
-            String input = scanner.nextLine();
-            chosenMovie = movieList.get(Integer.parseInt(input));
+            String chosenNumber = scanner.nextLine();
+            chosenMovie = movieList.get(Integer.parseInt(chosenNumber));
             System.out.println("You chose " + chosenMovie.getMovieTitle());
         } catch (IndexOutOfBoundsException e) {
             throw new MenuException("Choose one of the movies listed: " );
