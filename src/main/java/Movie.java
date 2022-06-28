@@ -23,4 +23,16 @@ public class Movie {
     public Integer getFreeSeats() {
         return freeSeats;
     }
+
+    public void setFreeSeats(Integer freeSeats) {
+        this.freeSeats = freeSeats;
+    }
+
+    public LocalDateTime getPlayTime() {
+        return playTime;
+    }
+
+    public Integer getCinemaNr() {
+        return cinemaNr;
+    }
 }

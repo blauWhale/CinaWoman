@@ -43,8 +43,17 @@ public class Main {
             try {
                 choice = Integer.parseInt(scanner.nextLine());
                 switch (choice) {
-                    case 1 -> System.out.println(chosenMovie.getMovieTitle() + " has [" + chosenMovie.getFreeSeats() + "] free Seats"  );
-                    case 2 -> System.out.println("More Information");
+                    case 1 -> {
+                        if(chosenMovie.getFreeSeats()<=0){
+                            throw new MenuException("Unfortunately there are [0] seats available");
+                        }
+                        if(chosenMovie.getFreeSeats()>0){
+                            chosenMovie.setFreeSeats(chosenMovie.getFreeSeats()-1);
+                            System.out.println("You successfully reserved a seat for "+ chosenMovie.getMovieTitle());
+                            System.out.println(chosenMovie.getMovieTitle() + " has [" + chosenMovie.getFreeSeats() + "] seat(s) still available"  );
+                        }
+                    }
+                    case 2 -> System.out.println(chosenMovie.getMovieTitle() + " is playing in Cinema [" + chosenMovie.getCinemaNr() + "] at " + chosenMovie.getPlayTime() );
                     case 0 -> System.out.println("Program closed");
                     default -> throw new MenuException("Choose one of the options in the menu (0-2)");
                 }

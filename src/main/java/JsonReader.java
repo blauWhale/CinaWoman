@@ -3,7 +3,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -16,7 +16,7 @@ public class JsonReader {
 
     public ArrayList<Movie> readJsonFile() {
         JSONParser jsonParser = new JSONParser();
-        try (FileReader reader = new FileReader("C:/Users/shajn/IdeaProjects/CinaWoman/movies.json")) {
+        try (FileReader reader = new FileReader("movies.json")) {
             //Read JSON file
             Object obj = jsonParser.parse(reader);
             parseMovieObject((JSONObject) obj);
