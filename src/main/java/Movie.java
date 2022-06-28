@@ -5,11 +5,10 @@ public class Movie {
     private String title;
     private Integer lengthInMinutes;
     private Integer cinemaNr;
-    //TODO switch to LocalDateTime
-    private Integer playTime;
+    private LocalDateTime playTime;
     private Integer freeSeats;
 
-    public Movie(String title, Integer lengthInMinutes, Integer cinemaNr, Integer playTime, Integer freeSeats) {
+    public Movie(String title, Integer lengthInMinutes, Integer cinemaNr, LocalDateTime playTime, Integer freeSeats) {
         this.title = title;
         this.lengthInMinutes = lengthInMinutes;
         this.cinemaNr = cinemaNr;

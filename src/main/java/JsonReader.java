@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
@@ -15,7 +16,7 @@ public class JsonReader {
 
     public ArrayList<Movie> readJsonFile() {
         JSONParser jsonParser = new JSONParser();
-        try (FileReader reader = new FileReader("CinaWoman/movies.json")) {
+        try (FileReader reader = new FileReader("C:/Users/shajn/IdeaProjects/CinaWoman/movies.json")) {
             //Read JSON file
             Object obj = jsonParser.parse(reader);
             parseMovieObject((JSONObject) obj);
@@ -38,7 +39,7 @@ public class JsonReader {
         JSONArray moviesJsonArr = (JSONArray) object.get("movies");
         for (Object o : moviesJsonArr) {
             JSONObject moviesJsonObj = (JSONObject) o;
-            Movie movie = new Movie((String) moviesJsonObj.get("title"), Integer.parseInt((String) moviesJsonObj.get("lengthInMinutes")) , Integer.parseInt((String) moviesJsonObj.get("cinemaNr")), Integer.parseInt((String) moviesJsonObj.get("playTime")), Integer.parseInt((String) moviesJsonObj.get("freeSeats")));
+            Movie movie = new Movie((String) moviesJsonObj.get("title"), Integer.parseInt((String) moviesJsonObj.get("lengthInMinutes")) , Integer.parseInt((String) moviesJsonObj.get("cinemaNr")), LocalDateTime.parse((String) moviesJsonObj.get("playTime")), Integer.parseInt((String) moviesJsonObj.get("freeSeats")));
             teamArrayList.add(movie);
         }
     }
