@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 public class Main {
 
+    //TODO: TestCases
+    //TODO: Dokumentation nachführen
+
     public static void main(String[] args) throws MenuException {
         Scanner scanner = new Scanner(System.in);
         TimeTable timeTable = new TimeTable();
