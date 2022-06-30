@@ -1,19 +1,42 @@
 {
   "movies": [
     {
-      "title": "King Kong 2",
-      "lengthInMinutes": "7",
-      "cinemaNr": "5",
-      "playTime": "2007-12-03T10:15:30",
+      "title": "King Kong",
+      "lengthInMinutes": "120",
+      "cinemaNr": "1",
+      "playTime": "2020-12-03T10:00:00",
       "freeSeats": "50"
     },
 
     {
       "title": "Godzilla",
-      "lengthInMinutes": "7",
-      "cinemaNr": "5",
-      "playTime": "2007-12-03T10:15:30",
+      "lengthInMinutes": "72",
+      "cinemaNr": "2",
+      "playTime": "2020-12-03T10:00:00",
       "freeSeats": "2"
+    },
+    
+    {
+      "title": "Top Gun: Maverick",
+      "lengthInMinutes": "180",
+      "cinemaNr": "3",
+      "playTime": "2020-12-03T10:00:00",
+      "freeSeats": "22"
+    },
+    
+    {
+      "title": "The Batman",
+      "lengthInMinutes": "150",
+      "cinemaNr": "4",
+      "playTime": "2020-12-03T10:00:00",
+      "freeSeats": "22"
+    },
+     {
+      "title": "Pulp Fiction",
+      "lengthInMinutes": "98",
+      "cinemaNr": "5",
+      "playTime": "2020-12-03T10:00:00",
+      "freeSeats": "13"
     }
   ]
 }
